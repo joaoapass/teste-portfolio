@@ -22,7 +22,7 @@ body{
 
 header{
     height: 17vh;
-    width: 100vw;
+    width: 100vmax;
     background-color: var(--branco);
     display: block;
 }
