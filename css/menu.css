@@ -15,7 +15,7 @@
 }
 body{
     background-color: var(--branco);
-    width: 100%;
+    width: 100vw;
 }
 
 /* esquerda do header*/
@@ -348,7 +348,24 @@ header .menu #menu-texto{
 /*Parte da Responsividade*************************************************************************************************************/
 
 
-
+@media screen and (max-width: 768px) {
+    header .menu{
+        z-index: 1;
+        height: 3rem;
+        width: 3rem;
+        position: absolute;
+        top: 1rem;
+        right: 8vw;
+        font-family: var(--font);
+        cursor:pointer;
+    }
+    header .menu #menu-texto{
+        position:absolute ;
+        top: 0.55rem;
+        left: -4.5rem;
+        font-weight: var(--bold);
+    }
+}
 @media screen and (max-width: 600px){
     header{
         height: 17vh;
@@ -423,7 +440,7 @@ header .menu #menu-texto{
         width: 3rem;
         position: absolute;
         top: 1rem;
-        right: 2vw;
+        right: 8vw;
         font-family: var(--font);
         cursor:pointer;
     }
