@@ -15,14 +15,13 @@
 }
 body{
     background-color: var(--branco);
-    overflow-x: hidden;
+    width: 100%;
 }
 
 /* esquerda do header*/
 
 header{
     height: 17vh;
-    width: 100vmax;
     background-color: var(--branco);
     display: block;
 }
@@ -105,14 +104,19 @@ header .logo .titularidade{
 
 
 
-
+.menufixo{
+    z-index: 1;
+    position:fixed;
+    width: 100%;
+    right: 0;
+}
 header .menu{
     z-index: 1;
     height: 3rem;
     width: 8rem;
-    position: fixed;
+    position: absolute;
     top: 1rem;
-    right: 2vw;
+    right: 2vh;
     font-family: var(--font);
     cursor:pointer;
 }
@@ -348,9 +352,7 @@ header .menu #menu-texto{
 @media screen and (max-width: 600px){
     header{
         height: 17vh;
-        width: 100%;
         background-color: var(--branco);
-        display: block;
     }
     header .logo{
         position: absolute;
@@ -415,19 +417,16 @@ header .menu #menu-texto{
     
     
     
-    
-    
     header .menu{
         z-index: 1;
         height: 3rem;
         width: 3rem;
-        position: fixed;
+        position: absolute;
         top: 1rem;
-        right: 0.5rem;
+        right: 2vw;
         font-family: var(--font);
         cursor:pointer;
     }
-    
     .hamburguer{
         position: absolute;
         background-color: var(--preto);

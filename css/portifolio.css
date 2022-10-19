@@ -23,6 +23,7 @@ body{
 /* Previa Sobre Mim ******************************************************************************/
 
 .previa-sobreMim{
+    background-color: var(--branco);
     height: 70vh;
     width: 100vmax;
     display: flex;
@@ -85,8 +86,6 @@ body{
 /* Area de Projetos *****************************************************************************/
 
 .AreaProjetos{
-    z-index: -1;
-    background-color: var(--branco);
     position: relative;
     height: 90vh;
     width: 100vw;
@@ -433,6 +432,11 @@ footer {
 /* Area projetos ************************************************************/
 
 
+.AreaProjetos{
+    position: absolute;
+    top: 50vw;
+    width: 100vw;
+}
 .tituloProjetos h4{
     font-weight: var(--regular);
     font-size: 2.5vw;
@@ -451,7 +455,7 @@ footer {
     align-items: center;
     justify-content: center;
     top: 10rem;
-    right: 0;
+    right: 5vw;
     left: 0;
 }
 .projeto1{
@@ -498,7 +502,8 @@ footer {
 /* Chamada para contato *******************************************************/
 
 .chamadaPcontato{
-    top: 22vh;
+    position: absolute;
+    top: 140vw;
 }
 
 .precisa h3{
@@ -523,7 +528,8 @@ footer {
 /* Footer ***********************************************************************/
 
 footer {
-    top: 30vh;
+    position: absolute;
+    top: 165vw;
 
 }
 }
@@ -584,7 +590,10 @@ footer {
     font-weight: var(--bold);
     font-size: 5.5vw;
 }
-
+.AreaProjetos{
+    position: absolute;
+    top: 60vw;
+}
 .Projetos{
     position: absolute;
     display: grid;
@@ -599,7 +608,7 @@ footer {
 }
 .projeto1 img{
     height: 35vw;
-    border-radius: 6vw;
+    border-radius: 8vw;
 }
 .projeto2{
     position: relative;
@@ -609,7 +618,7 @@ footer {
 }
 .projeto2 img{
     height: 35vw;
-    border-radius: 6vw;
+    border-radius: 8vw;
 }
 .projeto3{
     position: relative;
@@ -620,7 +629,7 @@ footer {
 .projeto3 img{
     height: 35vw;
 
-    border-radius: 6vw;
+    border-radius: 8vw;
 }
 .projeto3 p{
     position: absolute;
@@ -639,8 +648,8 @@ footer {
 /* Chamada para contato *******************************************************/
 
 .chamadaPcontato{
-    position: relative;
-    top: 15vh;
+    position: absolute;
+    top:155vw;
     width: 100vw;
     right: 0;
     left: 0;
@@ -665,8 +674,9 @@ footer {
 
 footer {
     background-color: var(--preto);
-    position: relative;
-    height: 60vh;
+    position: absolute;
+    top: 185vw;
+    height: 60vmax;
     width: 100vw;
     display: grid;
     grid-template-areas: 
@@ -679,18 +689,17 @@ footer {
     position: relative;
     grid-area: contato;
     width: 50vw;
-    height: 50vh;
     left: 2rem;
     top: 2rem;
 }
 .SobreContato h2{
     font-weight: var(--bold);
-    font-size: 3vw;
+    font-size: 3.5vw;
 }
 .SobreContato p{
     position: relative;
     font-weight:var(--regular);
-    font-size: 2vw;
+    font-size: 2.5vw;
     width: 50vw;
     top: 0.5rem;
 }
@@ -712,7 +721,6 @@ footer {
 .segueAi{
     position: relative;
     grid-area: links;
-    height: 50vh;
     color: var(--branco);
     top: 2rem;
 }
@@ -723,6 +731,9 @@ footer {
 .redesSociais{
     position: relative;
     top: 1rem;
+}
+.InstagramIcon{
+    height: 4.5vw;
 }
 .instagram a{
 
@@ -745,7 +756,9 @@ footer {
     color: var(--branco);
     stroke: var(--branco);
 }
-
+.BehanceIcon{
+    height: 4.5vw;
+}
 .behance a{
     stroke:var(--branco);
     display: flex;
@@ -766,7 +779,9 @@ footer {
     color: var(--branco);
     stroke: var(--branco);
 }
-
+.LinkedinIcon{
+    height: 4.5vw;
+}
 .linkedin a{
     stroke:var(--branco);
     display: flex;
@@ -792,9 +807,9 @@ footer {
 .DireitoAutorais{
     position: relative;
     grid-area: footer;
-    bottom: 2rem;
+    width: 100vw;
+    bottom: 7vw;
     display: flex;
-    height: 10vh;
     align-items: center;
     justify-content: center;
 }
@@ -807,6 +822,7 @@ footer {
 .IconeLogo{
     stroke:var(--cinza);
     cursor: pointer;
+    height: 5vw;
     transition: 0.5s;
 }
 .IconeLogo:hover{
@@ -832,6 +848,9 @@ footer {
         } 
     
         /* Sobre mim ********************************************************/
+        .previa-sobreMim{
+            height: auto;
+        }
         .texto-sobreMim{
             position: absolute;
             left: 3vmax;
@@ -871,10 +890,10 @@ footer {
     
     .AreaProjetos{
         z-index: -1;
-        position: relative;
-        height: 140vh;
+        position: absolute;
+        top: 120vw;
+        height: 170vw;
         width: 100vw;
-        top: 10vw;
     }
     .tituloProjetos h4{
         font-weight: var(--regular);
@@ -903,7 +922,7 @@ footer {
     }
     .projeto1 img{
         height: 50vw;
-        border-radius: 6vw;
+        border-radius: 10vw;
     }
     .projeto2{
         position: relative;
@@ -913,7 +932,7 @@ footer {
     }
     .projeto2 img{
         height: 50vw;
-        border-radius: 6vw;
+        border-radius: 10vw;
     }
     .projeto3{
         position: relative;
@@ -924,7 +943,7 @@ footer {
     .projeto3 img{
         height: 50vw;
     
-        border-radius: 6vw;
+        border-radius: 10vw;
     }
     .projeto3 p{
         position: absolute;
@@ -943,8 +962,8 @@ footer {
     /* Chamada para contato *******************************************************/
     
     .chamadaPcontato{
-        position: relative;
-        top: 15vh;
+        position: absolute;
+        top: 300vw;
         width: 100vw;
         right: 0;
         left: 0;
@@ -969,8 +988,9 @@ footer {
     
     footer {
         background-color: var(--preto);
-        position: relative;
-        height: 60vh;
+        position: absolute;
+        top: 330vw;
+        height: 80vmin;
         width: 100vw;
         display: grid;
         grid-template-areas: 
@@ -985,7 +1005,7 @@ footer {
         grid-area: contato;
         height: 60vw;
         width: 100vw;
-        left: 2rem;
+        left: 1rem;
         top: 2rem;
     }
     .SobreContato h2{
@@ -1019,8 +1039,8 @@ footer {
         grid-area: links;
         height: 10vh;
         color: var(--branco);
-        top: -7rem;
-        left: 2rem;
+        top: -15vmin;
+        left: 1rem;
     }
     .segueAi h2{
         font-weight: var(--bold);
@@ -1030,6 +1050,9 @@ footer {
         display: flex;
         position: relative;
         top: 1rem;
+    }
+    .InstagramIcon{
+        height: 6vw;
     }
     .instagram a{
     
@@ -1052,7 +1075,9 @@ footer {
         color: var(--branco);
         stroke: var(--branco);
     }
-    
+    .BehanceIcon{
+        height: 6vw;
+    }
     .behance a{
         stroke:var(--branco);
         display: flex;
@@ -1073,7 +1098,9 @@ footer {
         color: var(--branco);
         stroke: var(--branco);
     }
-    
+    .LinkedinIcon{
+        height: 6vw;
+    }
     .linkedin a{
         stroke:var(--branco);
         display: flex;
@@ -1097,27 +1124,341 @@ footer {
     
     
     .DireitoAutorais{
-        position: relative;
+        position: absolute;
         grid-area: footer;
         display: flex;
         height: auto;
         align-items: center;
-        top: -3rem;
-        left: -9rem;
+        top: -9vmin;
+        left: -24.5vmin;
     }
     .DireitoAutorais p{
         position: relative;
         color: var(--cinza);
         left: 0.5rem;
-        font-size: 2.2vw;
+        font-size: 2.5vw;
     }
     .IconeLogo{
         stroke:var(--cinza);
         cursor: pointer;
         transition: 0.5s;
-        height: 2.5rem;
+        height: 6vw;
     }
     .IconeLogo:hover{
         stroke: var(--vermelho);
     }
     }
+
+@media screen and (max-width: 400px) {
+        /* Menu **********************************************************************/
+            .menu:hover #hamburguer2{
+                background-color: var(--preto);
+            }
+             .menu:hover #hamburguer1{
+                background-color: var(--preto);
+                top: 0.6rem;
+            }
+             .menu:hover #hamburguer3{
+                background-color: var(--preto);
+                top: -0.6rem;
+            }
+            .menu:hover #menu-texto{
+                color: var(--preto);
+            } 
+        
+            /* Sobre mim ********************************************************/
+            .texto-sobreMim{
+                position: absolute;
+                left: 3vmax;
+                top: 87vw;
+            }
+            
+            #salve{
+                font-size: 6.5vw;
+            }
+            #EuMemo{
+                position: relative;
+                top: -5.8vw;
+                left: 26vw;
+                font-size:  4.5vw;
+            }
+            
+            .conteudoPrevia{
+                position: absolute;
+                font-size: 4.5vw;
+                font-weight: var(--regular);
+                top: 7vw;
+                width: 80vw;
+            }
+            .fotinha{
+                position:absolute;
+                right: 25vw;
+                top: 23vw;
+                animation:none;
+            }
+            .fotinha img{
+                pointer-events: none;
+                height: 72vw;
+                box-shadow: #f5f5f5;
+            }
+        
+        /* Area projetos ************************************************************/
+        
+        .AreaProjetos{
+            z-index: -1;
+            position: absolute;
+            top: 135vw;
+            height: 170vw;
+            width: 100vw;
+        }
+        .tituloProjetos h4{
+            font-weight: var(--regular);
+            font-size: 4.5vw;
+        }
+        
+        .tituloProjetos h1{
+            font-weight: var(--bold);
+            font-size: 7.5vw;
+        }
+        
+        .Projetos{
+            position: absolute;
+            display: grid;
+            grid-template-columns: 70vw;
+            top: 20vw;
+            gap: 1px;
+            right: 15vw;
+            left: 0;
+        }
+        .projeto1{
+            position: relative;
+            height: 55vw;
+            width: 70vw;
+            cursor: pointer;
+        }
+        .projeto1 img{
+            height: 60vw;
+            border-radius: 13vw;
+        }
+        .projeto2{
+            position: relative;
+            height: 55vw;
+            width: 70vw;
+            cursor: pointer;
+        }
+        .projeto2 img{
+            height: 60vw;
+            border-radius: 13vw;
+        }
+        .projeto3{
+            position: relative;
+            height: 55vw;
+            width: 70vw;
+            cursor: pointer;
+        }
+        .projeto3 img{
+            height: 60vw;
+        
+            border-radius: 13vw;
+        }
+        .projeto3 p{
+            position: absolute;
+            color: var(--branco);
+            font-weight: var(--bold);
+            font-size: 7vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 2rem;
+            top: 1.5rem;
+        }
+        
+        /* Chamada para contato *******************************************************/
+        
+        .chamadaPcontato{
+            position: absolute;
+            top: 330vw;
+            width: 100vw;
+            right: 0;
+            left: 0;
+        }
+        
+        .precisa h3{
+            font-size: 4.5vw;
+            padding-bottom: 5px;
+            color: var(--preto);
+        }
+        .Bora h1{
+            font-size: 5.5vw;
+        }
+        .tracoDlink{
+            width: 74vw;
+            background-color: var(--vermelho);
+        }
+        .Bora:hover .tracoDlink{
+            animation: none;
+        }
+        /* Footer *********************************************************************/
+        
+        footer {
+            background-color: var(--preto);
+            position: absolute;
+            top: 360vw;
+            height: 90vmin;
+            width: 100vw;
+            display: grid;
+            grid-template-areas: 
+            'contato'
+            'links'
+            'footer';
+        
+        }
+        .SobreContato{
+            color: var(--branco);
+            position: relative;
+            grid-area: contato;
+            height: 60vw;
+            width: 100vw;
+            left: 1rem;
+            top: 1rem;
+        }
+        .SobreContato h2{
+            font-weight: var(--bold);
+            font-size: 5vw;
+        }
+        .SobreContato p{
+            position: relative;
+            font-weight:var(--regular);
+            font-size: 3.5vw;
+            width: 80vw;
+            top: 0.5rem;
+        }
+        .SobreContato a{
+            position: relative;
+            text-decoration: none;
+            top: 0.5rem;
+            font-weight: var(--regular);
+        }
+        .SobreContato a p{
+            color: var(--branco);
+            padding-bottom: 10px;
+        }
+        .SobreContato a p:hover{
+            text-decoration:none;
+        }
+        
+        
+        .segueAi{
+            position: relative;
+            grid-area: links;
+            height: 10vh;
+            color: var(--branco);
+            top: -10vmin;
+            left: 1rem;
+        }
+        .segueAi h2{
+            font-weight: var(--bold);
+            font-size: 4.5vw;
+        }
+        .redesSociais{
+            display: flex;
+            position: relative;
+            top: 1.5rem;
+        }
+        .InstagramIcon{
+            height: 8vw;
+        }
+        .instagram a{
+        
+            stroke:var(--branco);
+            display: flex;
+            align-items: center;
+            color: var(--branco);
+            text-decoration: none;
+            padding-right: 20px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .instagram h3{
+            position: relative;
+            left: 0.5rem;
+            font-weight: var(--regular);
+            font-size: 3vw;
+        }
+        .instagram a:hover{
+            color: var(--branco);
+            stroke: var(--branco);
+        }
+        .BehanceIcon{
+            height: 8vw;
+        }
+        .behance a{
+            stroke:var(--branco);
+            display: flex;
+            align-items: center;
+            color: var(--branco);
+            text-decoration: none;
+            padding-right: 20px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .behance h3{
+            position: relative;
+            left: 0.5rem;
+            font-weight: var(--regular);
+            font-size: 3vw;
+        }
+        .behance a:hover{
+            color: var(--branco);
+            stroke: var(--branco);
+        }
+        .LinkedinIcon{
+            height: 8vw;
+        }
+        .linkedin a{
+            stroke:var(--branco);
+            display: flex;
+            align-items: center;
+            color: var(--branco);
+            text-decoration: none;
+            padding-right: 20px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .linkedin h3{
+            position: relative;
+            left: 0.5rem;
+            font-weight: var(--regular);
+            font-size: 3vw;
+        }
+        .linkedin a:hover{
+            color: var(--branco);
+            stroke: var(--branco);
+        }
+        
+        
+        .DireitoAutorais{
+            position: absolute;
+            grid-area: footer;
+            display: flex;
+            width: 100vw;
+            align-items: center;
+            top: -6vmin;
+            left: -18vw;
+        }
+        .DireitoAutorais p{
+            position: relative;
+            color: var(--cinza);
+            left: 0.5rem;
+            font-size: 3vw;
+        }
+        .IconeLogo{
+            stroke:var(--cinza);
+            cursor: pointer;
+            transition: 0.5s;
+            height: 8vw;
+        }
+        .IconeLogo:hover{
+            stroke: var(--vermelho);
+        }
+        }
