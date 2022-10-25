@@ -349,21 +349,23 @@ header .menu #menu-texto{
 
 
 @media screen and (max-width: 768px) {
+    body{
+        touch-action:pan-y;
+    }
     header .menu{
         z-index: 1;
-        height: 3rem;
-        width: 3rem;
         position: absolute;
         top: 1rem;
-        right: 8vw;
         font-family: var(--font);
         cursor:pointer;
     }
     header .menu #menu-texto{
         position:absolute ;
         top: 0.55rem;
-        left: -4.5rem;
         font-weight: var(--bold);
+    }
+    .menu-link{
+        height: 100%;
     }
 }
 @media screen and (max-width: 600px){
@@ -588,9 +590,10 @@ header .menu #menu-texto{
     
         /*Menu escondido*/
     .menu-link{
+        touch-action: none;
         position:fixed;
         display: none;
-        height: 100vh;
+        height: 100%;
         width: 100vw;
         background-color: var(--preto);
     }

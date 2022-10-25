@@ -37,7 +37,7 @@ body{
 .previa-sobreMim{
     background-color: var(--branco);
     height: 70vh;
-    width: 100vmax;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
 }
@@ -132,30 +132,60 @@ body{
 .projeto1{
     position: relative;
     height: 24vw;
-    width: 42vw;
-    cursor: pointer;
+    transition: 1s ease-in-out;
+    filter: opacity(0.8);
 }
 .projeto1 img{
     height: 24vw;
     padding: 1rem;
     border-radius: 6vw;
+    box-shadow: -50px -50px -50px -50px #e16969;
+    pointer-events: none;
+
+}
+.projeto1 p{
+    position: absolute;
+    color: var(--preto);
+    font-weight: var(--regular);
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    right: 0;
+    left: -0vw;
+    bottom: 1.5rem;
 }
 .projeto2{
     position: relative;
+    transition: 1s ease-in-out;
     height: 24vw;
-    width: 42vw;
-    cursor: pointer;
+    filter: opacity(0.8);
 }
 .projeto2 img{
+    transition: 1s ease-in-out;
     height: 24vw;
     padding: 1rem;
     border-radius: 6vw;
+    pointer-events: none;
+}
+.projeto2 p{
+    position: absolute;
+    color: var(--branco);
+    font-weight: var(--regular);
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    right: 0;
+    left: 0;
+    bottom: 1.5rem;
 }
 .projeto3{
     position: relative;
     height: 24vw;
-    width: 42vw;
-    cursor: pointer;
+    pointer-events: none;
 }
 .projeto3 img{
     height: 24vw;
@@ -172,9 +202,95 @@ body{
     align-items: center;
     flex-direction: row;
     right: 0;
-    left: -8vw;
+    left: 0;
     bottom: 0;
     top: 0;
+}
+
+/* Overlay ************************************************************************************/
+
+.Projetos h3{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 2px solid var(--branco);
+    border-radius: 1vw;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: var(--branco);
+    font-size: 2rem;   
+}
+.viewMore{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    height: 6vw;
+    width: 17vw !important;
+    top: 9vw;
+    bottom: 0;
+    right: 0;
+    left: 8vw;
+    width: auto; 
+    cursor: pointer;
+    transition: 1s;
+}
+/*.Projetos .overlay{
+        display: block;
+            position: relative;
+            height: 21.7vw;
+            top: -23.15vw;
+            left: 1.1vw;
+            border-radius: 4.8vw;
+            background-color: #e1696900;
+}*/
+.viewMore h3{
+            transition: 0.7s ease-in-out;
+        }
+.projeto1:hover .viewMore{
+    display: flex;
+    animation: viewAnime 1s forwards cubic-bezier(.66,0,.26,.5);
+}
+.projeto2:hover .viewMore{
+    display: flex;
+    animation: viewAnime 1s forwards cubic-bezier(.66,0,.26,.5);
+}
+.viewMore:hover h3{
+    background-color: var(--branco);
+    border-radius: 3vw;
+    border: none;
+    color: #e1696988;
+}
+.projeto1:hover img{
+    animation: overlayAnime 0.7s forwards ease-in-out;
+    
+}
+.projeto2:hover img{
+    animation: overlayAnime 0.7s forwards ease-in-out;
+    
+}
+.projeto3:hover img{
+    animation: overlayAnime 0.7s forwards ease-in-out;
+}
+@keyframes viewAnime {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes overlayAnime {
+    100%{
+        filter: brightness(0.5);
+    }
+
 }
 
 /* Chamada para contato *************************************************************************/
@@ -473,25 +589,32 @@ footer {
 .projeto1{
     position: relative;
     height: 35vw;
-    cursor: pointer;
 }
 .projeto1 img{
     height: 35vw;
     border-radius: 6vw;
 }
+.projeto1 p{
+    font-size: 2vw;
+    left: 1.5vw;
+    right: 0;
+}
 .projeto2{
     position: relative;
     height: 35vw;
-    cursor: pointer;
 }
 .projeto2 img{
     height: 35vw;
     border-radius: 6vw;
 }
+.projeto2 p{
+    font-size: 2vw;
+    left: 1.5vw;
+    right: 0;
+}
 .projeto3{
     position: relative;
     height: 35vw;
-    cursor: pointer;
 }
 .projeto3 img{
     height: 35vw;
@@ -511,6 +634,19 @@ footer {
     top: 0;
 }
 
+.Projetos h3{
+    border: 2px solid var(--branco);
+    border-radius: 1vw;
+    font-size: 3.5vw;   
+}
+.viewMore{
+    height: 8vw;
+    width: 22vw !important;
+    top: 13.5vw;
+    bottom: 0;
+    right: 0;
+    left: 13vw;
+}
 /* Chamada para contato *******************************************************/
 
 .chamadaPcontato{
@@ -622,6 +758,11 @@ footer {
     height: 35vw;
     border-radius: 8vw;
 }
+.projeto1 p{
+    font-size: 2.2vw;
+    right: 1vw;
+    left: 0;
+}
 .projeto2{
     position: relative;
     height: 35vw;
@@ -631,6 +772,11 @@ footer {
 .projeto2 img{
     height: 35vw;
     border-radius: 8vw;
+}
+.projeto2 p{
+    font-size: 2.2vw;
+    right: 0.5vw;
+    left: 0;
 }
 .projeto3{
     position: relative;
@@ -657,6 +803,10 @@ footer {
     top: 0;
 }
 
+.overlay{
+    display: none;
+    visibility:visible;
+}
 /* Chamada para contato *******************************************************/
 
 .chamadaPcontato{
@@ -844,7 +994,14 @@ footer {
 
 @media screen and (max-width: 600px) {
     /* Menu **********************************************************************/
-        .menu:hover #hamburguer2{
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .menu:hover #hamburguer2{
             background-color: var(--preto);
         }
          .menu:hover #hamburguer1{
@@ -932,6 +1089,9 @@ footer {
         width: 70vw;
         cursor: pointer;
     }
+    .projeto1 p{
+        font-size: 3vw;
+    }
     .projeto1 img{
         height: 50vw;
         border-radius: 10vw;
@@ -945,6 +1105,9 @@ footer {
     .projeto2 img{
         height: 50vw;
         border-radius: 10vw;
+    }
+    .projeto2 p{
+        font-size: 3vw;
     }
     .projeto3{
         position: relative;
@@ -1252,6 +1415,11 @@ footer {
             height: 60vw;
             border-radius: 13vw;
         }
+        .projeto1 p{
+            font-size: 3.5vw;
+            right: -5rem;
+            bottom: 0rem;
+        }
         .projeto2{
             position: relative;
             height: 55vw;
@@ -1261,6 +1429,11 @@ footer {
         .projeto2 img{
             height: 60vw;
             border-radius: 13vw;
+        }
+        .projeto2 p{
+            font-size: 3.5vw;
+            right: -5rem;
+            bottom: 0rem;
         }
         .projeto3{
             position: relative;
