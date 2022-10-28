@@ -29,7 +29,6 @@ body::-webkit-scrollbar-thumb:hover{
 body{
     position: absolute;
     color: var(--preto);
-    background-color: var(--branco);
     overflow-x: hidden;
     height: 100vh;
     width: 100%;
@@ -176,6 +175,12 @@ footer {
     font-weight: var(--bold);
     text-transform: uppercase;
 }
+.Sobre a{
+    transition: 0.5s;
+}
+.Sobre a:hover{
+    color: var(--vermelho);
+}
 .Sobre p{
     margin-top: 1.5rem;
     font-size: 1.5rem;
@@ -296,6 +301,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+
     .titulo{
         font-size: 1.8rem;
     }

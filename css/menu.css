@@ -367,6 +367,22 @@ header .menu #menu-texto{
     .menu-link{
         height: 100%;
     }
+
+    .menu:hover #hamburguer2{
+        background-color: var(--preto);
+    }
+     .menu:hover #hamburguer1{
+        background-color: var(--preto);
+        top: 0.6rem;
+    }
+     .menu:hover #hamburguer3{
+        background-color: var(--preto);
+        top: -0.6rem;
+    }
+     .menu:hover #menu-texto{
+        color: var(--preto);
+        position: absolute;
+    }
 }
 @media screen and (max-width: 600px){
     header{

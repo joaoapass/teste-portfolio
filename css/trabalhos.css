@@ -85,7 +85,7 @@ body{
     height: 60vw;
     margin: 0.5vw 0;
 }
-.voltar a{
+a{
     color: var(--branco);
     text-decoration: none;
     transition: 0.7s;
