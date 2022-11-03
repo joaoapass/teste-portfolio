@@ -23,7 +23,21 @@ body{
 }
 
 /* Titulo **********************************************************/
-
+.obrigado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+.obrigado a{
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+.obrigado a:hover{
+   color: var(--vermelho);
+}
 .Titulo{
     position: relative;
     padding-top: 1rem;
@@ -51,27 +65,6 @@ body{
     box-shadow: 5px 5px 5px var(--cinza);
     border-radius: 20px;
     overflow: hidden;
-}
-#erro1 img, #sucesso1 img{
-    position: absolute;
-    height: 2rem;
-    top: 3.6rem;
-    right: 1.5rem;
-    margin-bottom: 10rem;
-    visibility: hidden;
-}
-#erro2 img, #sucesso2 img{
-    position: absolute;
-    height: 2rem;
-    top: 12.3rem;
-    right: 1.5rem;
-    margin-bottom: 10rem;
-    visibility: hidden;
-}
-small{
-    visibility: hidden;
-    padding: 0.2rem ;
-    color: var(--vermelho);
 }
 
 .formControl{
@@ -137,16 +130,16 @@ textarea{
 
 .email.erro, .nome.erro, .mensagem.erro{
     border: 2px solid var(--vermelho);
+    outline: none;
 }
 .email.erro::placeholder, .nome.erro::placeholder, .mensagem.erro::placeholder{
     color: var(--vermelho);
 }
 
-.formControl.erro small{
-    visibility: visible;
+#erros{
+    color: var(--vermelho);
+    padding: 0.2rem 0.5rem;
 }
-
-
 /* Responsividade ******************************************/
 
 @media screen and (max-width: 768px) {
@@ -157,18 +150,29 @@ textarea{
     .btn_enviar {
         width: 70vw;
         border-radius: 10px;
+        background-color: var(--preto);
     }
     .btn_enviar:hover {
-        background-color: transparent;
+        background-color: var(--preto);
+    }
+    .btn_enviar p{
+        color: var(--branco);
     }
     .btn_enviar:hover p{
-        color: var(--preto);
+        color: var(--branco);
     }
 }
 
 @media screen and (max-width:600px) {
-    .subtitulo{
-        font-size: 1.5rem;
+    .obrigado{
+        justify-content: baseline;
+        height: 100vmin;
+    }
+    .subtitulo, .obrigado a{
+        font-size: 4vw;
+    }
+    .obrigado a:hover{
+        color: var(--preto);
     }
     .btn_enviar {
         width: 90vw;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/sobre-mim.css">
     <link rel="stylesheet" href="../css/contato.css">
-    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="../js/menu.js" defer></script>
+    <script type="text/javascript" src="../js/form.js" defer></script>
     <title>Contato</title>
 </head>
 <body>
@@ -123,32 +124,28 @@
 
         <section class="formulario">
              <form name="form" id="form" action="https://formsubmit.co/068daf8cc49bb08661fb6429cd219c01" method="POST">
-            <input type="hidden" name="_next" value="https://joaoapass.github.io/teste-portfolio/pages/contato.html">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/pages/obrigado.html">
             <input type="hidden" name="_autoresponse" value="João Alves Passos | Obrigado pelo contato, responderei assim que possível">
 
             <div class="formControl">
-                <label for="nome"><p class="labelForm">Seu nome</p></label>
-                <input type="text" class="nome" id="nome" name="name" placeholder="Qual seu nome?" required>
-                <i class="deuErro" id="erro1"><img src="../img/icone de erro.svg" alt=""></i>
-                <i class="soSucesso" id="sucesso1"><img src="../img/icone de sucesso.svg" alt=""></svg></i>
-                <small>Mensagem de erro</small>
+                <label for="nome"><p class="labelForm">Seu primeiro nome</p></label>
+                <input type="text" class="nome" id="nome" name="name" placeholder="Qual seu nome?"  maxlength="25" minlength="2" required>
             </div>
 
             <div class="formControl">
                 <label for="email"><p class="labelForm">Seu email</p></label>
-                <input type="text" class="email" id="email" name="email" placeholder="Qual seu email?" required>
-                <i class="deuErro" id="erro2"><img src="../img/icone de erro.svg" alt=""></i>
-                <i class="soSucesso" id="sucesso2"><img src="../img/icone de sucesso.svg" alt=""></svg></i>
-                <small id="small">Mensagem de erro</small>
+                <input type="text" class="email" id="email" name="email" placeholder="Qual seu email?" spellcheck="false" required
+                 maxlength="50">
+                <span id="erros"></span>
             </div>
 
                 <div class="formControl">
                 <label for="mensagem"><p class="labelForm">Sua mensagem</p></label>
-                <textarea type="text" class="mensagem" id="mensagem" name="message" placeholder="O que você precisa?" required></textarea>
-                <small>Mensagem de erro</small>
+                <textarea type="text" class="mensagem" id="mensagem" name="message" required
+                placeholder="O que você precisa?"  ></textarea>
                     </div>
 
-            <button type="submit" class="btn_enviar"><p>Enviar mensagem</p></button>
+            <button type="submit" class="btn_enviar" id="btn" ><p>Enviar mensagem</p></button>
             </form>
         </section>
     </section>

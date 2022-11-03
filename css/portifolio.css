@@ -27,27 +27,58 @@ body::-webkit-scrollbar-thumb:hover{
     background-color: var(--vermelho);
 }
 body{
+    position: absolute;
     color: var(--preto);
-    background-color: var(--branco);
     overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.titulo{
+    font-size: 2.7rem;
+    font-weight: var(--bold);
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+    color: var(--preto);
 }
 
 /* Previa Sobre Mim ******************************************************************************/
 
 .previa-sobreMim{
-    background-color: var(--branco);
-    height: 70vh;
-    width: 100vw;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: -5rem;
 }
 
+.fotinha img{
+    position: relative;
+    right: 5vw;
+    margin-left: 1rem;
+    height: 55vw;
+    pointer-events: none;
+    animation: euMeMovo 1s infinite alternate ease-in-out;
+}
+@keyframes euMeMovo {
+    0%{
+        top: -2rem;
+    }
+    100%{
+        top: 2rem;
+    }
+}
 .texto-sobreMim{
-    position: absolute;
-    left: 3vmax;
-    top: 31vh;
+    position: relative;
+    right: 5vw;
 }
-
+.conteudoPrevia{
+    position: relative;
+    width: 50vw;
+}
+.conteudoPrevia p{
+    font-size: 2.5vw;
+}
 #salve{
     position: relative;
     font-weight: var(--bold);
@@ -57,1590 +88,557 @@ body{
     -0.1vmax 0.1vmax 0vmax var(--preto),                    
     0.1vmax -0.1vmax 0vmax var(--preto),                  
     0.1vmax 0.1vmax 0vmax var(--preto);
-    font-size: 3.5vw;
+    font-size: 3.6vw;
 }
 #EuMemo{
     position: relative;
     top: -3.2vw;
-    left: 14.2vw;
+    left: 14.5vw;
     font-size:  2.5vw;
-}
-
-.conteudoPrevia{
-    position: absolute;
-    font-size: 2.3vw;
-    font-weight: var(--regular);
-    top: 4vw;
-    width: 45vmax;
-}
-
-.fotinha{
-    position:absolute;
-    right: 12vw;
-    top: 5vmax;
-    animation: euMeMovo 1s infinite alternate ease-in-out;
-}
-.fotinha img{
-    pointer-events: none;
-    height: 45vw;
-    box-shadow: #f5f5f5;
-
-}
-@keyframes euMeMovo {
-    0%{
-        top: 3rem;
-    }
-    100%{
-        top: 5rem;
-    }
 }
 
 /* Area de Projetos *****************************************************************************/
 
-.AreaProjetos{
+.areaProjeto{
     position: relative;
-    height: 90vh;
     width: 100vw;
+    top: -7rem;
 }
 
 .tituloProjetos{
-    position: absolute;
-    padding: 1vw;
-    left: 3.5vw;
+    position: relative;
+    left: 4vw;
+    margin-bottom: 2rem;
 }
-.tituloProjetos h4{
-    font-weight: var(--regular);
+.tituloProjetos p{
     font-size: 2vw;
-}
-
-.tituloProjetos h1{
-    font-weight: var(--bold);
-    font-size: 5vw;
+    font-weight: var(--regular);
 }
 
 .Projetos{
-    position: absolute;
+    position: relative;
     display: grid;
-    grid-template-columns: 33vw 33vw 33vw;
-    gap: 1px;
+    grid-template-columns: 30vw 30vw 30vw;
+    gap: 20px;
     align-items: center;
     justify-content: center;
-    top: 15rem;
-    right: 0;
-    left: 0;
+    top: 6rem;
 }
-.projeto1{
-    position: relative;
-    height: 24vw;
-    transition: 1s ease-in-out;
-    filter: opacity(0.8);
-}
-.projeto1 img{
-    height: 24vw;
-    padding: 1rem;
-    border-radius: 6vw;
-    box-shadow: -50px -50px -50px -50px #e16969;
-    pointer-events: none;
 
+.projeto1{
+    background-image: url(../img/The-wave.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+    margin-bottom: 5vw;
+    border-radius: 50px;
+    overflow: hidden;
 }
 .projeto1 p{
-    position: absolute;
-    color: var(--preto);
-    font-weight: var(--regular);
-    font-size: 1.5vw;
+    position: relative;
     display: flex;
+    top: 16.5rem;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    right: 0;
-    left: -0vw;
-    bottom: 1.5rem;
+    font-size: 1.5vw;
 }
 .projeto2{
-    position: relative;
-    transition: 1s ease-in-out;
-    height: 24vw;
-    filter: opacity(0.8);
-}
-.projeto2 img{
-    transition: 1s ease-in-out;
-    height: 24vw;
-    padding: 1rem;
-    border-radius: 6vw;
-    pointer-events: none;
+    background-image: url(../img/isell.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+    margin-bottom: 5vw;
+    border-radius: 50px;
+    overflow: hidden;
 }
 .projeto2 p{
-    position: absolute;
-    color: var(--branco);
-    font-weight: var(--regular);
-    font-size: 1.5vw;
+    position: relative;
     display: flex;
+    top: 16.5rem;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    right: 0;
-    left: 0;
-    bottom: 1.5rem;
+    font-size: 1.5vw;
+    color: var(--branco);
 }
 .projeto3{
-    position: relative;
-    height: 24vw;
-    pointer-events: none;
-}
-.projeto3 img{
-    height: 24vw;
-    padding: 1rem;
-    border-radius: 6vw;
+    background-image: url(../img/em-breve.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    background-position: center;
+    margin-bottom: 5vw;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 .projeto3 p{
-    position: absolute;
     color: var(--branco);
-    font-weight: var(--bold);
     font-size: 3vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 0;
-}
-
-/* Overlay ************************************************************************************/
-
-.Projetos h3{
-    z-index: 1;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    border: 2px solid var(--branco);
-    border-radius: 1vw;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    color: var(--branco);
-    font-size: 2rem;   
-}
-.viewMore{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    position: absolute;
-    height: 6vw;
-    width: 17vw !important;
-    top: 9vw;
-    bottom: 0;
-    right: 0;
-    left: 8vw;
-    width: auto; 
-    cursor: pointer;
-    transition: 1s;
-}
-/*.Projetos .overlay{
-        display: block;
-            position: relative;
-            height: 21.7vw;
-            top: -23.15vw;
-            left: 1.1vw;
-            border-radius: 4.8vw;
-            background-color: #e1696900;
-}*/
-.viewMore h3{
-            transition: 0.7s ease-in-out;
-        }
-.projeto1:hover .viewMore{
-    display: flex;
-    animation: viewAnime 1s forwards cubic-bezier(.66,0,.26,.5);
-}
-.projeto2:hover .viewMore{
-    display: flex;
-    animation: viewAnime 1s forwards cubic-bezier(.66,0,.26,.5);
-}
-.viewMore:hover h3{
-    background-color: var(--branco);
-    border-radius: 3vw;
-    border: none;
-    color: #e1696988;
-}
-.projeto1:hover img{
-    animation: overlayAnime 0.7s forwards ease-in-out;
-    
-}
-.projeto2:hover img{
-    animation: overlayAnime 0.7s forwards ease-in-out;
-    
-}
-.projeto3:hover img{
-    animation: overlayAnime 0.7s forwards ease-in-out;
-}
-@keyframes viewAnime {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-@keyframes overlayAnime {
-    100%{
-        filter: brightness(0.5);
-    }
-
-}
-
-/* Chamada para contato *************************************************************************/
-
-.chamadaPcontato{
-    position: relative;
-    height: 20vw;
-    width: 100vmax;
-    top: -10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.precisa h3{
-    font-weight: var(--regular);
-    font-size: 1.8vw;
-    padding-bottom: 5px;
-    color: var(--preto);
-}
-.Bora{
-    justify-content: center;
-}
-.Bora a{
-    text-decoration: none;
-}
-.Bora h1{
     font-weight: var(--bold);
-    font-size: 3.5vw;
-    color: var(--preto);
-    text-decoration: none;
-}
-
-.tracoDlink{
-    display: block;
-    background-color: transparent;
-    position: absolute;
-    width: 0;
-    height: 6px;
-}
-
-.Bora:hover .tracoDlink{
-    display: block;
-    height: 6px;
-    animation: tracoDoLink 0.7s forwards cubic-bezier(.55,-0.28,.21,1.27);
-}
-@keyframes tracoDoLink {
-    0%{
-        width: 0;
-        background-color: var(--vermelho);
-    }
-    100%{
-        width: 47vw;
-        background-color: var(--vermelho);
-    }
-}
-
-/* Footer ********************************************************************************************/
-
-footer {
-    background-color: var(--preto);
-    position: relative;
-    height: 60vh;
-    width: 100vmax;
-    display: grid;
-    grid-template-areas: 
-    'contato links'
-    'footer footer';
-
-}
-.SobreContato{
-    color: var(--branco);
-    position: relative;
-    grid-area: contato;
-    width: 40vmax;
-    height: 50vh;
-    left: 2rem;
-    top: 2rem;
-}
-.SobreContato h2{
-    font-weight: var(--bold);
-    font-size: 2rem;
-}
-.SobreContato p{
-    position: relative;
-    font-weight:var(--regular);
-    font-size: 1.2rem;
-    width: 35vmax;
-    top: 0.5rem;
-}
-.SobreContato a{
-    position: relative;
-    text-decoration: none;
-    top: 0.5rem;
-    font-weight: var(--regular);
-}
-.SobreContato a p{
-    color: var(--branco);
-    padding-bottom: 10px;
-}
-.SobreContato a p:hover{
-    text-decoration:underline;
-}
-
-
-.segueAi{
-    position: relative;
-    grid-area: links;
-    height: 50vh;
-    color: var(--branco);
-    top: 2rem;
-}
-.segueAi h2{
-    font-weight: var(--bold);
-    font-size: 2rem;
-}
-.redesSociais{
-    position: relative;
-    top: 1rem;
-}
-.instagram a{
-
-    stroke:var(--branco);
-    display: flex;
-    align-items: center;
-    color: var(--branco);
-    text-decoration: none;
-    padding-bottom: 20px;
-    transition: 0.5s;
-    cursor: pointer;
-}
-.instagram h3{
-    position: relative;
-    left: 0.5rem;
-    font-weight: var(--regular);
-    font-size: 1.2rem;
-}
-.instagram a:hover{
-    color: var(--vermelho);
-    stroke: var(--vermelho);
-}
-
-.behance a{
-    stroke:var(--branco);
-    display: flex;
-    align-items: center;
-    color: var(--branco);
-    text-decoration: none;
-    padding-bottom: 20px;
-    transition: 0.5s;
-    cursor: pointer;
-}
-.behance h3{
-    position: relative;
-    left: 0.5rem;
-    font-weight: var(--regular);
-    font-size: 1.2rem;
-}
-.behance a:hover{
-    color: var(--vermelho);
-    stroke: var(--vermelho);
-}
-
-.linkedin a{
-    stroke:var(--branco);
-    display: flex;
-    align-items: center;
-    color: var(--branco);
-    text-decoration: none;
-    padding-bottom: 20px;
-    transition: 0.5s;
-    cursor: pointer;
-}
-.linkedin h3{
-    position: relative;
-    left: 0.5rem;
-    font-weight: var(--regular);
-    font-size: 1.2rem;
-}
-.linkedin a:hover{
-    color: var(--vermelho);
-    stroke: var(--vermelho);
-}
-
-
-.DireitoAutorais{
-    position: relative;
-    grid-area: footer;
-    bottom: 2rem;
-    display: flex;
-    height: 10vh;
-    align-items: center;
-    justify-content: center;
-}
-.DireitoAutorais p{
-    position: relative;
-    color: var(--cinza);
-    left: 0.5rem;
-}
-.IconeLogo{
-    stroke:var(--cinza);
-    cursor: pointer;
-    transition: 0.5s;
-}
-.IconeLogo:hover{
-    stroke: var(--vermelho);
-}
-
-
-/*Resposividade***********************************************************************************/
-
-@media only screen and (max-width: 990px) {
-/* Sobre mim ********************************************************/
-    .texto-sobreMim{
-        position: absolute;
-        left: 3vmax;
-        top: 27vh;
-    }
-    
-    #salve{
-        position: relative;
-        font-weight: var(--bold);
-        color: var(--vermelho);
-        text-shadow: 
-        -0.1vmax -0.1vmax 0vmax var(--preto), 
-        -0.1vmax 0.1vmax 0vmax var(--preto),                    
-        0.1vmax -0.1vmax 0vmax var(--preto),                  
-        0.1vmax 0.1vmax 0vmax var(--preto);
-        font-size: 3.8vw;
-    }
-    #EuMemo{
-        position: relative;
-        top: -3.5vw;
-        left: 15.5vw;
-        font-size:  2.8vw;
-    }
-    
-    .conteudoPrevia{
-        position: absolute;
-        font-size: 2.8vw;
-        font-weight: var(--regular);
-        top: 4vw;
-        width: 50vmax;
-    }
-    .fotinha{
-        position:absolute;
-        right: 10vw;
-        top: 5vmax;
-        animation: euMeMovo 1s infinite alternate ease-in-out;
-    }
-    .fotinha img{
-        pointer-events: none;
-        height: 45vw;
-        box-shadow: #f5f5f5;
-    
-    }
-    @keyframes euMeMovo {
-        0%{
-            top: 4rem;
-        }
-        100%{
-            top: 6rem;
-        }
-    }
-
-/* Area projetos ************************************************************/
-
-
-.AreaProjetos{
-    position: absolute;
-    top: 50vw;
-    width: 100vw;
-}
-.tituloProjetos h4{
-    font-weight: var(--regular);
-    font-size: 2.5vw;
-}
-
-.tituloProjetos h1{
-    font-weight: var(--bold);
-    font-size: 5.5vw;
-}
-
-.Projetos{
-    position: absolute;
-    display: grid;
-    grid-template-columns: 45vw 45vw;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    top: 10rem;
-    right: 5vw;
-    left: 0;
-}
-.projeto1{
-    position: relative;
-    height: 35vw;
-}
-.projeto1 img{
-    height: 35vw;
-    border-radius: 6vw;
-}
-.projeto1 p{
-    font-size: 2vw;
-    left: 1.5vw;
-    right: 0;
-}
-.projeto2{
-    position: relative;
-    height: 35vw;
-}
-.projeto2 img{
-    height: 35vw;
-    border-radius: 6vw;
-}
-.projeto2 p{
-    font-size: 2vw;
-    left: 1.5vw;
-    right: 0;
-}
-.projeto3{
-    position: relative;
-    height: 35vw;
-}
-.projeto3 img{
-    height: 35vw;
-    border-radius: 6vw;
-}
-.projeto3 p{
-    position: absolute;
-    color: var(--branco);
-    font-weight: var(--bold);
-    font-size: 4vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: -3rem;
-    left: 0rem;
-    bottom: 0rem;
-    top: 0;
-}
-
-.Projetos h3{
-    border: 2px solid var(--branco);
-    border-radius: 1vw;
-    font-size: 3.5vw;   
-}
-.viewMore{
-    height: 8vw;
-    width: 22vw !important;
-    top: 13.5vw;
-    bottom: 0;
-    right: 0;
-    left: 13vw;
-}
-/* Chamada para contato *******************************************************/
-
-.chamadaPcontato{
-    position: absolute;
-    top: 140vw;
-}
-
-.precisa h3{
-    font-size: 2.3vw;
-    padding-bottom: 5px;
-    color: var(--preto);
-}
-.Bora h1{
-    font-size: 4vw;
-}
-@keyframes tracoDoLink {
-    0%{
-        width: 0;
-        background-color: var(--vermelho);
-    }
-    100%{
-        width: 53.5vw;
-        background-color: var(--vermelho);
-    }
-}
-
-/* Footer ***********************************************************************/
-
-footer {
-    position: absolute;
-    top: 165vw;
-
-}
-}
-
-@media screen and (max-width: 768px) {
-/* Menu **********************************************************************/
-    .menu:hover #hamburguer2{
-        background-color: var(--preto);
-    }
-     .menu:hover #hamburguer1{
-        background-color: var(--preto);
-        top: 0.6rem;
-    }
-     .menu:hover #hamburguer3{
-        background-color: var(--preto);
-        top: -0.6rem;
-    }
-    .menu:hover #menu-texto{
-        color: var(--preto);
-    } 
-
-    /* Sobre mim ********************************************************/
-    #EuMemo{
-        position: relative;
-        top: -3.5vw;
-        left: 15.5vw;
-        font-size:  2.8vw;
-    }
-    
-    .conteudoPrevia{
-        position: absolute;
-        font-size: 2.8vw;
-        font-weight: var(--regular);
-        top: 4vw;
-        width: 50vw;
-    }
-    .fotinha{
-        position:absolute;
-        right: 10vw;
-        top: 7rem;
-        animation:none;
-    }
-    .fotinha img{
-        pointer-events: none;
-        height: 45vw;
-        box-shadow: #f5f5f5;
-    }
-
-/* Area projetos ************************************************************/
-
-
-.tituloProjetos h4{
-    font-weight: var(--regular);
-    font-size: 2.5vw;
-}
-
-.tituloProjetos h1{
-    font-weight: var(--bold);
-    font-size: 5.5vw;
-}
-.AreaProjetos{
-    position: absolute;
-    top: 60vw;
-}
-.Projetos{
-    position: absolute;
-    display: grid;
-    grid-template-columns: 45vw 45vw;
-    gap: 1px;
-}
-.projeto1{
-    position: relative;
-    height: 35vw;
-    width: 49vw;
-    cursor: pointer;
-}
-.projeto1 img{
-    height: 35vw;
-    border-radius: 8vw;
-}
-.projeto1 p{
-    font-size: 2.2vw;
-    right: 1vw;
-    left: 0;
-}
-.projeto2{
-    position: relative;
-    height: 35vw;
-    width: 49vw;
-    cursor: pointer;
-}
-.projeto2 img{
-    height: 35vw;
-    border-radius: 8vw;
-}
-.projeto2 p{
-    font-size: 2.2vw;
-    right: 0.5vw;
-    left: 0;
-}
-.projeto3{
-    position: relative;
-    height: 35vw;
-    width: 49vw;
-    cursor: pointer;
-}
-.projeto3 img{
-    height: 35vw;
-
-    border-radius: 8vw;
-}
-.projeto3 p{
-    position: absolute;
-    color: var(--branco);
-    font-weight: var(--bold);
-    font-size: 3.5vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 0;
 }
 
 .overlay{
-    display: none;
-    visibility:visible;
+    position: relative;
+    background-color:#e1696993;
+    height: 330px;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    top: -2rem;
+    transition: 0.7s;
 }
-/* Chamada para contato *******************************************************/
+.viewMore{
+    border: 2px solid var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 13rem;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.viewMore h3{
+    font-size: 2rem;
+    color: var(--branco);
+    transition: 0.7s;
+}
+.overlay:hover{
+    opacity: 1;
+}
+.viewMore:hover{
+    background-color: var(--branco);
+    border-radius: 25px;
+}
+.viewMore:hover h3{
+    color: #e16969;
+}
+
+/* Chamada para Contato *****************************************/
 
 .chamadaPcontato{
-    position: absolute;
-    top:155vw;
-    width: 100vw;
-    right: 0;
-    left: 0;
+    margin-top: 3vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.chamadaPcontato p{
+    font-size: 2rem;
+    margin-bottom: 1vw;
 }
 
-.precisa h3{
-    font-size: 2.3vw;
-    padding-bottom: 5px;
-    color: var(--preto);
+.tracoLink{
+        display: block;
+        background-color: transparent;
+        width: 0;
+        height: 0.5vw;
+    }
+    
+.Bora:hover .tracoLink{
+    display: block;
+    height: 0.5vw;
+    width: 0;
+    animation: tracoDoLink 0.7s forwards ease-in-out;
 }
-.Bora h1{
-    font-size: 4vw;
+@keyframes tracoDoLink {
+    0%{
+        width: 0;
+        background-color: var(--vermelho);
+    }
+    100%{
+        width: 100%;
+        background-color: var(--vermelho);
+    }
 }
-.tracoDlink{
-    width: 53.5vw;
-    background-color: var(--vermelho);
-}
-.Bora:hover .tracoDlink{
-    animation: none;
-}
-/* Footer *********************************************************************/
+
+/* Footer ***********************************************************/
 
 footer {
+    margin-top: 5rem;
     background-color: var(--preto);
-    position: absolute;
-    top: 185vw;
-    height: 60vmax;
-    width: 100vw;
-    display: grid;
-    grid-template-areas: 
-    'contato links'
-    'footer footer';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.Contato{
+    margin-top: 1.5rem;
+    margin-left: 2vw;
+    display: flex;
 }
-.SobreContato{
+.Contato, .Contato a{
     color: var(--branco);
-    position: relative;
-    grid-area: contato;
-    width: 50vw;
-    left: 2rem;
-    top: 2rem;
 }
-.SobreContato h2{
+.Sobre{
+    width: 50vw;
+}
+
+.titulo2{
+    font-size: 2.2rem;
     font-weight: var(--bold);
-    font-size: 3.5vw;
+    text-transform: uppercase;
 }
-.SobreContato p{
-    position: relative;
-    font-weight:var(--regular);
-    font-size: 2.5vw;
-    width: 50vw;
-    top: 0.5rem;
+.Sobre a{
+    transition: 0.5s;
 }
-.SobreContato a{
-    position: relative;
-    text-decoration: none;
-    top: 0.5rem;
+.Sobre a:hover{
+    color: var(--vermelho);
+}
+.Sobre p{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
     font-weight: var(--regular);
 }
-.SobreContato a p{
-    color: var(--branco);
-    padding-bottom: 10px;
-}
-.SobreContato a p:hover{
-    text-decoration:none;
-}
-
 
 .segueAi{
-    position: relative;
-    grid-area: links;
-    color: var(--branco);
-    top: 2rem;
+    margin-left: 10vw
 }
-.segueAi h2{
-    font-weight: var(--bold);
-    font-size: 3vw;
-}
+
 .redesSociais{
-    position: relative;
-    top: 1rem;
+    margin-top: 1.5rem;
 }
-.InstagramIcon{
-    height: 4.5vw;
-}
+
 .instagram a{
 
     stroke:var(--branco);
     display: flex;
     align-items: center;
     color: var(--branco);
-    text-decoration: none;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     transition: 0.5s;
     cursor: pointer;
 }
 .instagram h3{
-    position: relative;
-    left: 0.5rem;
+    margin-left: 0.5rem;
     font-weight: var(--regular);
-    font-size: 2.5vw;
+    font-size: 1.2rem;
 }
 .instagram a:hover{
-    color: var(--branco);
-    stroke: var(--branco);
+    color: var(--vermelho);
+    stroke: var(--vermelho);
 }
-.BehanceIcon{
-    height: 4.5vw;
-}
+
 .behance a{
     stroke:var(--branco);
     display: flex;
     align-items: center;
     color: var(--branco);
-    text-decoration: none;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     transition: 0.5s;
     cursor: pointer;
 }
 .behance h3{
-    position: relative;
-    left: 0.5rem;
+    margin-left: 0.5rem;
     font-weight: var(--regular);
-    font-size: 2.5vw;
+    font-size: 1.2rem;
 }
 .behance a:hover{
-    color: var(--branco);
-    stroke: var(--branco);
+    color: var(--vermelho);
+    stroke: var(--vermelho);
 }
-.LinkedinIcon{
-    height: 4.5vw;
-}
+
 .linkedin a{
     stroke:var(--branco);
     display: flex;
     align-items: center;
     color: var(--branco);
-    text-decoration: none;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     transition: 0.5s;
     cursor: pointer;
 }
 .linkedin h3{
-    position: relative;
-    left: 0.5rem;
+    margin-left: 0.5rem;
     font-weight: var(--regular);
-    font-size: 2.5vw;
+    font-size: 1.2rem;
 }
 .linkedin a:hover{
-    color: var(--branco);
-    stroke: var(--branco);
+    color: var(--vermelho);
+    stroke: var(--vermelho);
 }
 
-
-.DireitoAutorais{
-    position: relative;
-    grid-area: footer;
-    width: 100vw;
-    bottom: 7vw;
+.DireitosAutorais{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.DireitoAutorais p{
-    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color: var(--cinza);
-    left: 0.5rem;
-    font-size: 2.2vw;
 }
-.IconeLogo{
-    stroke:var(--cinza);
-    cursor: pointer;
-    height: 5vw;
+.DireitosAutorais svg{
+    margin-right: 1rem;
+    stroke: var(--cinza);
     transition: 0.5s;
 }
-.IconeLogo:hover{
+.DireitosAutorais svg:hover{
     stroke: var(--vermelho);
 }
+
+/* Parte de responsividade ***********************************************/
+
+@media screen and (max-width: 990px) {
+
+    .titulo{
+        font-size: 2.3rem;
+    }
+    .text p{
+        font-size: 1.5rem;
+    }
+
+    .software h3{
+        font-size: 1.7rem;
+    }
+    .chamadaPcontato p{
+        font-size: 1.5rem;
+    }
+    .titulo2{
+        font-size: 2rem;
+    }
+    .Sobre p{
+        font-size: 1.3rem;
+    }
+    .DireitosAutorais p{
+        font-size: 1rem;
+    }
+    .IconeLogo{
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #salve{
+        font-size: 4vw;
+    }
+    #EuMemo{
+        top: -0.5vw;
+        left: 0vw;
+        font-size:  3vw;
+    }
+    .conteudoPrevia p{
+        font-size: 2.7vw;
+    }
+    .fotinha img{
+        animation: none;
+    }
+
+
+    .areaProjeto{
+        top: 0;
+    }
+    .tituloProjetos{
+        margin-bottom: 0;
+    }
+    .tituloProjetos p{
+       font-size: 1.5rem;
+    }
+    .Projetos{
+        grid-template-columns: 45vw 45vw;
+        pointer-events: all;
+    }
+
+    .Projetos p{
+        font-size: 2.5vw;
+    }
+    .projeto1, .projeto2, .projeto3{
+        margin: 0;
+    }
+    .projeto3 p{
+        font-size: 4.5vw;
+    }
+    .projeto3{
+        margin-bottom: 8rem;
+    }
+    
+    .overlay{
+        display: none;
+    }
+    .link{
+        background-color: #a7a7a700;
+        height: 300px;
+    }
+
+    .titulo{
+        font-size: 2.5rem;
+    }
+    .text p{
+        font-size: 1.2rem;
+    }
+
+    .software h3{
+        font-size: 1.4rem;
+    }
+    .chamadaPcontato p{
+        font-size: 1.2rem;
+    }
+    .Bora:hover .tracoLink{
+        animation: none;
+    }
+    .titulo2{
+        font-size: 1.7rem;
+    }
+    .Sobre p{
+        font-size: 1rem;
+    }
+    .redesSociais h3{
+        font-size: 1rem;
+    }
+    .DireitosAutorais p{
+        font-size: 0.8rem;
+    }
+    .IconeLogo{
+        height: 2.1rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    /* Menu **********************************************************************/
-    body{
-        width: 100%;
-    }
-    
-    .menu:hover #hamburguer2{
-            background-color: var(--preto);
-        }
-         .menu:hover #hamburguer1{
-            background-color: var(--preto);
-            top: 0.6rem;
-        }
-         .menu:hover #hamburguer3{
-            background-color: var(--preto);
-            top: -0.6rem;
-        }
-        .menu:hover #menu-texto{
-            color: var(--preto);
-        } 
-    
-        /* Sobre mim ********************************************************/
-        .previa-sobreMim{
-            height: auto;
-        }
-        .texto-sobreMim{
-            position: absolute;
-            left: 3vmax;
-            top: 80vw;
-        }
-        
-        #salve{
-            font-size: 6vw;
-        }
-        #EuMemo{
-            position: relative;
-            top: -5vw;
-            left: 24.5vw;
-            font-size:  4vw;
-        }
-        
-        .conteudoPrevia{
-            position: absolute;
-            font-size: 4vw;
-            font-weight: var(--regular);
-            top: 7vw;
-            width: 80vw;
-        }
-        .fotinha{
-            position:absolute;
-            right: 25vw;
-            top: 18vw;
-            animation:none;
-        }
-        .fotinha img{
-            pointer-events: none;
-            height: 70vw;
-            box-shadow: #f5f5f5;
-        }
-    
-    /* Area projetos ************************************************************/
-    
-    .AreaProjetos{
-        z-index: -1;
-        position: absolute;
-        top: 120vw;
-        height: 170vw;
-        width: 100vw;
-    }
-    .tituloProjetos h4{
-        font-weight: var(--regular);
-        font-size: 4vw;
-    }
-    
-    .tituloProjetos h1{
-        font-weight: var(--bold);
-        font-size: 7vw;
-    }
-    
-    .Projetos{
-        position: absolute;
-        display: grid;
-        grid-template-columns: 50vw;
-        top: 20vw;
-        gap: 1px;
-        right: 15vw;
-        left: 0;
-    }
-    .projeto1{
+
+    section.previa-sobreMim{
         position: relative;
-        height: 50vw;
-        width: 70vw;
-        cursor: pointer;
-    }
-    .projeto1 p{
-        font-size: 3vw;
-    }
-    .projeto1 img{
-        height: 50vw;
-        border-radius: 10vw;
-    }
-    .projeto2{
-        position: relative;
-        height: 50vw;
-        width: 70vw;
-        cursor: pointer;
-    }
-    .projeto2 img{
-        height: 50vw;
-        border-radius: 10vw;
-    }
-    .projeto2 p{
-        font-size: 3vw;
-    }
-    .projeto3{
-        position: relative;
-        height: 50vw;
-        width: 70vw;
-        cursor: pointer;
-    }
-    .projeto3 img{
-        height: 50vw;
-    
-        border-radius: 10vw;
-    }
-    .projeto3 p{
-        position: absolute;
-        color: var(--branco);
-        font-weight: var(--bold);
-        font-size: 5vw;
         display: flex;
-        justify-content: center;
+        flex-direction:column;
         align-items: center;
-        right: 0;
-        left: 0;
-        bottom: 0;
+        justify-content: center;
+    }
+    .texto-sobreMim{
+        margin-top: -10vmax;
+    }
+    .conteudoPrevia{
+        width: 90%;
+    }
+    .conteudoPrevia p{
+        font-size: 5vw;
+    }
+
+    #salve{
+        font-size: 8vw;
+        margin-left: 2rem;
+        text-shadow: 
+    -0.18vmax -0.18vmax 0vmax var(--preto), 
+    -0.18vmax 0.18vmax 0vmax var(--preto),                    
+    0.18vmax -0.18vmax 0vmax var(--preto),                  
+    0.18vmax 0.18vmax 0vmax var(--preto);
+    }
+    #EuMemo{
+        font-size: 5vw;
+        margin-left: 2rem;
+    }
+    .titulo{
+        font-size: 8vw;
+    }
+    .fotinha img{
+        height: 90vw;
+        margin-right: -2rem;
+    }
+    .conteudoPrevia{
+        margin: 1rem 0;
+        margin-left: 2rem;
+        width: 90vw;
+    }
+    .conteudoPrevia p{
+        font-size: 5vw;
+    }
+
+    .areaProjeto{
         top: 0;
     }
-    
-    /* Chamada para contato *******************************************************/
-    
-    .chamadaPcontato{
-        position: absolute;
-        top: 300vw;
-        width: 100vw;
-        right: 0;
-        left: 0;
+    .tituloProjetos{
+        margin-bottom: 0;
     }
-    
-    .precisa h3{
+    .tituloProjetos p{
+       font-size: 1.5rem;
+    }
+    .Projetos{
+        grid-template-columns: 90vw;
+        pointer-events: all;
+    }
+
+    .Projetos p{
         font-size: 4vw;
-        padding-bottom: 5px;
-        color: var(--preto);
+        top: 28rem;
     }
-    .Bora h1{
-        font-size: 5vw;
+    .projeto1, .projeto2, .projeto3{
+        margin: 0;
+        height: 500px;
     }
-    .tracoDlink{
-        width: 67.5vw;
-        background-color: var(--vermelho);
+    .projeto3 p{
+        font-size: 8vw;
     }
-    .Bora:hover .tracoDlink{
+    .projeto3{
+        margin-bottom: 8rem;
+    }
+
+    .chamadaPcontato{
+        align-items: baseline;
+        margin-left: 5vw;
+    }
+    .Bora:hover .tracoLink{
         animation: none;
     }
-    /* Footer *********************************************************************/
-    
-    footer {
-        background-color: var(--preto);
-        position: absolute;
-        top: 330vw;
-        height: 80vmin;
-        width: 100vw;
-        display: grid;
-        grid-template-areas: 
-        'contato'
-        'links'
-        'footer';
-    
+
+
+    .Contato{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
     }
-    .SobreContato{
-        color: var(--branco);
-        position: relative;
-        grid-area: contato;
-        height: 60vw;
-        width: 100vw;
-        left: 1rem;
-        top: 2rem;
-    }
-    .SobreContato h2{
-        font-weight: var(--bold);
+    .titulo2{
         font-size: 5vw;
     }
-    .SobreContato p{
-        position: relative;
-        font-weight:var(--regular);
-        font-size: 3vw;
+
+    .Sobre{
         width: 90vw;
-        top: 0.5rem;
     }
-    .SobreContato a{
-        position: relative;
-        text-decoration: none;
-        top: 0.5rem;
-        font-weight: var(--regular);
+    .Sobre p {
+        font-size: 5vw;
     }
-    .SobreContato a p{
-        color: var(--branco);
-        padding-bottom: 10px;
-    }
-    .SobreContato a p:hover{
-        text-decoration:none;
-    }
-    
-    
+
     .segueAi{
-        position: relative;
-        grid-area: links;
-        height: 10vh;
-        color: var(--branco);
-        top: -15vmin;
-        left: 1rem;
-    }
-    .segueAi h2{
-        font-weight: var(--bold);
-        font-size: 3vw;
+        margin-left: 0;
+        margin-top: 2rem;
     }
     .redesSociais{
         display: flex;
-        position: relative;
-        top: 1rem;
     }
-    .InstagramIcon{
-        height: 6vw;
+
+    .redesSociais h3{
+        display: none;
     }
-    .instagram a{
-    
-        stroke:var(--branco);
-        display: flex;
-        align-items: center;
-        color: var(--branco);
-        text-decoration: none;
-        padding-right: 20px;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-    .instagram h3{
-        position: relative;
-        left: 0.5rem;
-        font-weight: var(--regular);
-        font-size: 2.5vw;
+    .instagram a svg{
+        height: 8vw;
+        margin-right: 1rem;
     }
     .instagram a:hover{
         color: var(--branco);
         stroke: var(--branco);
     }
-    .BehanceIcon{
-        height: 6vw;
-    }
-    .behance a{
-        stroke:var(--branco);
-        display: flex;
-        align-items: center;
-        color: var(--branco);
-        text-decoration: none;
-        padding-right: 20px;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-    .behance h3{
-        position: relative;
-        left: 0.5rem;
-        font-weight: var(--regular);
-        font-size: 2.5vw;
+    .behance a svg{
+        height: 8vw;
+        margin-right: 1rem;
     }
     .behance a:hover{
         color: var(--branco);
         stroke: var(--branco);
     }
-    .LinkedinIcon{
-        height: 6vw;
-    }
-    .linkedin a{
-        stroke:var(--branco);
-        display: flex;
-        align-items: center;
-        color: var(--branco);
-        text-decoration: none;
-        padding-right: 20px;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-    .linkedin h3{
-        position: relative;
-        left: 0.5rem;
-        font-weight: var(--regular);
-        font-size: 2.5vw;
+    .linkedin a svg{
+        height: 8vw;
     }
     .linkedin a:hover{
         color: var(--branco);
         stroke: var(--branco);
     }
-    
-    
-    .DireitoAutorais{
-        position: absolute;
-        grid-area: footer;
-        display: flex;
-        height: auto;
-        align-items: center;
-        top: -9vmin;
-        left: -24.5vmin;
-    }
-    .DireitoAutorais p{
-        position: relative;
-        color: var(--cinza);
-        left: 0.5rem;
-        font-size: 2.5vw;
-    }
-    .IconeLogo{
-        stroke:var(--cinza);
-        cursor: pointer;
-        transition: 0.5s;
-        height: 6vw;
-    }
-    .IconeLogo:hover{
-        stroke: var(--vermelho);
-    }
-    }
 
-@media screen and (max-width: 400px) {
-        /* Menu **********************************************************************/
-            .menu:hover #hamburguer2{
-                background-color: var(--preto);
-            }
-             .menu:hover #hamburguer1{
-                background-color: var(--preto);
-                top: 0.6rem;
-            }
-             .menu:hover #hamburguer3{
-                background-color: var(--preto);
-                top: -0.6rem;
-            }
-            .menu:hover #menu-texto{
-                color: var(--preto);
-            } 
-        
-            /* Sobre mim ********************************************************/
-            .texto-sobreMim{
-                position: absolute;
-                left: 3vmax;
-                top: 87vw;
-            }
-            
-            #salve{
-                font-size: 6.5vw;
-            }
-            #EuMemo{
-                position: relative;
-                top: -5.8vw;
-                left: 26vw;
-                font-size:  4.5vw;
-            }
-            
-            .conteudoPrevia{
-                position: absolute;
-                font-size: 4.5vw;
-                font-weight: var(--regular);
-                top: 7vw;
-                width: 80vw;
-            }
-            .fotinha{
-                position:absolute;
-                right: 25vw;
-                top: 23vw;
-                animation:none;
-            }
-            .fotinha img{
-                pointer-events: none;
-                height: 72vw;
-                box-shadow: #f5f5f5;
-            }
-        
-        /* Area projetos ************************************************************/
-        
-        .AreaProjetos{
-            z-index: -1;
-            position: absolute;
-            top: 135vw;
-            height: 170vw;
-            width: 100vw;
-        }
-        .tituloProjetos h4{
-            font-weight: var(--regular);
-            font-size: 4.5vw;
-        }
-        
-        .tituloProjetos h1{
-            font-weight: var(--bold);
-            font-size: 7.5vw;
-        }
-        
-        .Projetos{
-            position: absolute;
-            display: grid;
-            grid-template-columns: 70vw;
-            top: 20vw;
-            gap: 1px;
-            right: 15vw;
-            left: 0;
-        }
-        .projeto1{
-            position: relative;
-            height: 55vw;
-            width: 70vw;
-            cursor: pointer;
-        }
-        .projeto1 img{
-            height: 60vw;
-            border-radius: 13vw;
-        }
-        .projeto1 p{
-            font-size: 3.5vw;
-            right: -5rem;
-            bottom: 0rem;
-        }
-        .projeto2{
-            position: relative;
-            height: 55vw;
-            width: 70vw;
-            cursor: pointer;
-        }
-        .projeto2 img{
-            height: 60vw;
-            border-radius: 13vw;
-        }
-        .projeto2 p{
-            font-size: 3.5vw;
-            right: -5rem;
-            bottom: 0rem;
-        }
-        .projeto3{
-            position: relative;
-            height: 55vw;
-            width: 70vw;
-            cursor: pointer;
-        }
-        .projeto3 img{
-            height: 60vw;
-        
-            border-radius: 13vw;
-        }
-        .projeto3 p{
-            position: absolute;
-            color: var(--branco);
-            font-weight: var(--bold);
-            font-size: 7vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            left: 2rem;
-            top: 1.5rem;
-        }
-        
-        /* Chamada para contato *******************************************************/
-        
-        .chamadaPcontato{
-            position: absolute;
-            top: 330vw;
-            width: 100vw;
-            right: 0;
-            left: 0;
-        }
-        
-        .precisa h3{
-            font-size: 4.5vw;
-            padding-bottom: 5px;
-            color: var(--preto);
-        }
-        .Bora h1{
-            font-size: 5.5vw;
-        }
-        .tracoDlink{
-            width: 74vw;
-            background-color: var(--vermelho);
-        }
-        .Bora:hover .tracoDlink{
-            animation: none;
-        }
-        /* Footer *********************************************************************/
-        
-        footer {
-            background-color: var(--preto);
-            position: absolute;
-            top: 360vw;
-            height: 90vmin;
-            width: 100vw;
-            display: grid;
-            grid-template-areas: 
-            'contato'
-            'links'
-            'footer';
-        
-        }
-        .SobreContato{
-            color: var(--branco);
-            position: relative;
-            grid-area: contato;
-            height: 60vw;
-            width: 100vw;
-            left: 1rem;
-            top: 1rem;
-        }
-        .SobreContato h2{
-            font-weight: var(--bold);
-            font-size: 5vw;
-        }
-        .SobreContato p{
-            position: relative;
-            font-weight:var(--regular);
-            font-size: 3.5vw;
-            width: 80vw;
-            top: 0.5rem;
-        }
-        .SobreContato a{
-            position: relative;
-            text-decoration: none;
-            top: 0.5rem;
-            font-weight: var(--regular);
-        }
-        .SobreContato a p{
-            color: var(--branco);
-            padding-bottom: 10px;
-        }
-        .SobreContato a p:hover{
-            text-decoration:none;
-        }
-        
-        
-        .segueAi{
-            position: relative;
-            grid-area: links;
-            height: 10vh;
-            color: var(--branco);
-            top: -10vmin;
-            left: 1rem;
-        }
-        .segueAi h2{
-            font-weight: var(--bold);
-            font-size: 4.5vw;
-        }
-        .redesSociais{
-            display: flex;
-            position: relative;
-            top: 1.5rem;
-        }
-        .InstagramIcon{
-            height: 8vw;
-        }
-        .instagram a{
-        
-            stroke:var(--branco);
-            display: flex;
-            align-items: center;
-            color: var(--branco);
-            text-decoration: none;
-            padding-right: 20px;
-            transition: 0.5s;
-            cursor: pointer;
-        }
-        .instagram h3{
-            position: relative;
-            left: 0.5rem;
-            font-weight: var(--regular);
-            font-size: 3vw;
-        }
-        .instagram a:hover{
-            color: var(--branco);
-            stroke: var(--branco);
-        }
-        .BehanceIcon{
-            height: 8vw;
-        }
-        .behance a{
-            stroke:var(--branco);
-            display: flex;
-            align-items: center;
-            color: var(--branco);
-            text-decoration: none;
-            padding-right: 20px;
-            transition: 0.5s;
-            cursor: pointer;
-        }
-        .behance h3{
-            position: relative;
-            left: 0.5rem;
-            font-weight: var(--regular);
-            font-size: 3vw;
-        }
-        .behance a:hover{
-            color: var(--branco);
-            stroke: var(--branco);
-        }
-        .LinkedinIcon{
-            height: 8vw;
-        }
-        .linkedin a{
-            stroke:var(--branco);
-            display: flex;
-            align-items: center;
-            color: var(--branco);
-            text-decoration: none;
-            padding-right: 20px;
-            transition: 0.5s;
-            cursor: pointer;
-        }
-        .linkedin h3{
-            position: relative;
-            left: 0.5rem;
-            font-weight: var(--regular);
-            font-size: 3vw;
-        }
-        .linkedin a:hover{
-            color: var(--branco);
-            stroke: var(--branco);
-        }
-        
-        
-        .DireitoAutorais{
-            position: absolute;
-            grid-area: footer;
-            display: flex;
-            width: 100vw;
-            align-items: center;
-            top: -6vmin;
-            left: -18vw;
-        }
-        .DireitoAutorais p{
-            position: relative;
-            color: var(--cinza);
-            left: 0.5rem;
-            font-size: 3vw;
-        }
-        .IconeLogo{
-            stroke:var(--cinza);
-            cursor: pointer;
-            transition: 0.5s;
-            height: 8vw;
-        }
-        .IconeLogo:hover{
-            stroke: var(--vermelho);
-        }
-        }
+    .DireitosAutorais{
+        margin-top: 2rem;
+    }
+    .DireitosAutorais svg{
+        margin: 0;
+        margin-right: 0.3rem;
+        height: 10vw;
+    }
+    .DireitosAutorais p{
+        font-size: 5vw;
+    }
+}
